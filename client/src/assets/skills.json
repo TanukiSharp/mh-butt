@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1, // machine de guerre
+        "levels": [
+            { "level": 1, "abilityIds": [ 1 ] },
+            { "level": 2, "abilityIds": [ 2 ] },
+            { "level": 3, "abilityIds": [ 3 ] },
+            { "level": 4, "abilityIds": [ 4, 8 ] },
+            { "level": 5, "abilityIds": [ 5, 8 ] },
+            { "level": 6, "abilityIds": [ 6, 8 ] },
+            { "level": 7, "abilityIds": [ 7, 8 ] }
+        ]
+    },
+    {
+        "id": 2, // bastion
+        "abilities": [
+            { "level": 1, "abilityIds": [ 9 ] },
+            { "level": 2, "abilityIds": [ 10 ] },
+            { "level": 3, "abilityIds": [ 11 ] },
+            { "level": 4, "abilityIds": [ 12, 16 ] },
+            { "level": 5, "abilityIds": [ 13, 16 ] },
+            { "level": 6, "abilityIds": [ 14, 16 ] },
+            { "level": 7, "abilityIds": [ 15, 16 ] }
+        ]
+    },
+    {
+        "id": 3, // invulnerabilite
+        "abilities": [
+            { "level": 1, "abilityIds": [ 17 ] },
+            { "level": 2, "abilityIds": [ 18 ] },
+            { "level": 3, "abilityIds": [ 19 ] },
+            { "level": 4, "abilityIds": [ 20 ] },
+            { "level": 5, "abilityIds": [ 21 ] }
+        ]
+    },
+    {
+        "id": 4, // fronde+
+        "abilities": [
+            { "level": 1, "abilityIds": [ 22 ] },
+            { "level": 2, "abilityIds": [ 23 ] },
+            { "level": 3, "abilityIds": [ 24 ] }
+        ]
+    },
+    {
+        "id": 5, // etancheite
+        "abilities": [
+            { "level": 1, "abilityIds": [ 25 ] },
+            { "level": 2, "abilityIds": [ 26 ] },
+            { "level": 3, "abilityIds": [ 27, 28 ] }
+        ]
+    },
+    {
+        "id": 6, // ignifuge
+        "abilities": [
+            { "level": 1, "abilityIds": [ 29 ] },
+            { "level": 2, "abilityIds": [ 30 ] },
+            { "level": 3, "abilityIds": [ 31, 28 ] }
+        ]
+    }
+]

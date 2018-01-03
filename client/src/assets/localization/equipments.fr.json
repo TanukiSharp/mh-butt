@@ -1,0 +1,26 @@
+{
+    "1": {
+        "name": "Collier de guerre",
+        "description": "Un accessoire magique qui augmente les talents"
+    },
+    "2": {
+        "name": "Collier de défense",
+        "description": "Un accessoire magique qui augmente les talents"
+    },
+    "3": {
+        "name": "Collier angléique",
+        "description": "Un accessoire magique qui augmente les talents"
+    },
+    "4": {
+        "name": "Collier de Lugus",
+        "description": "Un accessoire magique qui augmente les talents"
+    },
+    "5": {
+        "name": "Collier d'opale",
+        "description": "Un accessoire magique qui augmente les talents"
+    },
+    "6": {
+        "name": "Collier de rubis",
+        "description": "Un accessoire magique qui augmente les talents"
+    }
+}

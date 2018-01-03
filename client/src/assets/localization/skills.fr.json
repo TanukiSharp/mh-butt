@@ -1,0 +1,26 @@
+{
+    "1": {
+        "name": "Machine de guerre",
+        "description": "Augmente l'attaque ainsi que l'affinité aux niveaux supérieurs"
+    },
+    "2": {
+        "name": "Bastion",
+        "description": "Augmente la défense et la résistance élémentaire"
+    },
+    "3": {
+        "name": "Invulnérabilité",
+        "description": "Augmente la durée d'invulnérabilité lorsque vous esquivez une attaque"
+    },
+    "4": {
+        "name": "Fronde +",
+        "description": "Augmente le nombre de projectiles et de munitions obtenus sur le terrain pour la fronde"
+    },
+    "5": {
+        "name": "Etanchéité",
+        "description": "Augmente la protection contre les attaques élémentaires eau et les attaques physiques"
+    },
+    "6": {
+        "name": "Ignifuge",
+        "description": "Augmente la protection contre les attaques élémentaires feu et les attaques physiques"
+    }
+}

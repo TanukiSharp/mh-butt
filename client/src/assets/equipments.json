@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1, // collier de guerre
+        "rarity": 3,
+        "type": 2, // collier
+        "skills": [
+            1 // machine de guerre
+        ]
+    },
+    {
+        "id": 2, // collier de defense
+        "rarity": 3,
+        "type": 2, // collier
+        "skills": [
+            2 // bastion
+        ]
+    },
+    {
+        "id": 3, // collier angelique
+        "rarity": 4,
+        "type": 2, // collier
+        "skills": [
+            3 // invulnerabilite
+        ]
+    },
+    {
+        "id": 4, // collier de lugus
+        "rarity": 3,
+        "type": 2, // collier
+        "skills": [
+            4 // fronde+
+        ]
+    },
+    {
+        "id": 5, // collier d'opale
+        "rarity": 3,
+        "type": 2, // collier
+        "skills": [
+            5 // etancheite
+        ]
+    },
+    {
+        "id": 6, // collier de rubis
+        "rarity": 3,
+        "type": 2, // collier
+        "skills": [
+            6 // ignifuge
+        ]
+    }
+]
