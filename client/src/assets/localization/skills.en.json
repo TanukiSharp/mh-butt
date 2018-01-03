@@ -1,19 +1,19 @@
 {
     "1": {
-        "name": "Machine de guerre",
-        "description": "Augmente l'attaque ainsi que l'affinité aux niveaux supérieurs"
+        "name": "Attack Boost",
+        "description": "Increases attack power. Also improves affinity at higher levels."
     },
     "2": {
-        "name": "Bastion",
-        "description": "Augmente la défense et la résistance élémentaire"
+        "name": "Defense Boost",
+        "description": "Increases defense. Level up to improve resistances as well."
     },
     "3": {
-        "name": "Invulnérabilité",
-        "description": "Augmente la durée d'invulnérabilité lorsque vous esquivez une attaque"
+        "name": "Evade Window",
+        "description": "Extends the invulnerability period when evading."
     },
     "4": {
-        "name": "Fronde +",
-        "description": "Augmente le nombre de projectiles et de munitions obtenus sur le terrain pour la fronde"
+        "name": "Slinger Capacity",
+        "description": "Increases the slinger's loading capacity."
     },
     "5": {
         "name": "Critical Eye",
@@ -60,12 +60,12 @@
         "description": "Increases the power of bowgun special ammo and Dragon Piercer."
     },
     "16": {
-        "name": "Ignifuge",
-        "description": "Augmente la protection contre les attaques élémentaires feu et les attaques physiques"
+        "name": "Fire Resistance",
+        "description": "Increases fire resistance. Also improves defense at higher levels."
     },
     "17": {
-        "name": "Etanchéité",
-        "description": "Augmente la protection contre les attaques élémentaires eau et les attaques physiques"
+        "name": "Water Resistance",
+        "description": "Increases water resistance. Also improves defense at higher levels."
     },
     "18": {
         "name": "Thunder Resistance",
@@ -233,7 +233,7 @@
     },
     "59": {
         "name": "Cliffhanger",
-        "description": "Decreases stamina depletion when evading while clinging to walls or ivy."
+        "description": "Decreases stamina depletion when evading while climbing to walls or ivy."
     },
     "60": {
         "name": "Recovery Up",

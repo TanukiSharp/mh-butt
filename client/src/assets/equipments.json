@@ -3,48 +3,246 @@
         "id": 1, // collier de guerre
         "rarity": 3,
         "type": 2, // collier
-        "skills": [
-            1 // machine de guerre
-        ]
+        "skills": [ 1 ]
     },
     {
         "id": 2, // collier de defense
         "rarity": 3,
         "type": 2, // collier
-        "skills": [
-            2 // bastion
-        ]
+        "skills": [ 2 ]
     },
     {
         "id": 3, // collier angelique
         "rarity": 4,
         "type": 2, // collier
-        "skills": [
-            3 // invulnerabilite
-        ]
+        "skills": [ 3 ]
     },
     {
         "id": 4, // collier de lugus
         "rarity": 3,
         "type": 2, // collier
-        "skills": [
-            4 // fronde+
-        ]
+        "skills": [ 4 ]
     },
     {
         "id": 5, // collier d'opale
         "rarity": 3,
         "type": 2, // collier
-        "skills": [
-            5 // etancheite
-        ]
+        "skills": [ 5 ]
     },
     {
         "id": 6, // collier de rubis
         "rarity": 3,
         "type": 2, // collier
-        "skills": [
-            6 // ignifuge
-        ]
+        "skills": [ 6 ]
+    },
+    {
+        "id": 7, // Anja Headgear
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 1 ]
+    },
+    {
+        "id": 8, // Anja Armor
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 16 ]
+    },
+    {
+        "id": 9, // Anja Gloves
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 7 ]
+    },
+    {
+        "id": 10, // Anja Faulds
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 1 ]
+    },
+    {
+        "id": 11, // Anja Leggings
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 16 ]
+    },
+    {
+        "id": 12, // Ingot Helm
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 2 ]
+    },
+    {
+        "id": 13, // Ingot Mail
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 10 ]
+    },
+    {
+        "id": 14, // Ingot Vambraces
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 2 ]
+    },
+    {
+        "id": 15, // Ingot Coil
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 23 ]
+    },
+    {
+        "id": 16, // Ingot Greaves
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 5 ]
+    },
+    {
+        "id": 17, // Jagras Helm
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 60 ]
+    },
+    {
+        "id": 18, // Jagras Mail
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 2 ]
+    },
+    {
+        "id": 19, // Jagras Vambraces
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 44 ]
+    },
+    {
+        "id": 20, // Jagras Coil
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 61 ]
+    },
+    {
+        "id": 21, // Jagras Greaves
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 44 ]
+    },
+    {
+        "id":22, // Pukei Helm
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 44 ]
+    },
+    {
+        "id": 23, // Pukei Mail
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 60 ]
+    },
+    {
+        "id": 24, // Pukei Vambraces
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 27 ]
+    },
+    {
+        "id": 25, // Pukei Coil
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 60 ]
+    },
+    {
+        "id": 26, // Pukei Greaves
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 27 ]
+    },
+    {
+        "id": 27, // Bone Helm
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 37 ]
+    },
+    {
+        "id": 28, // Bone Mail
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 1 ]
+    },
+    {
+        "id": 29, // Bone Vambraces
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 38 ]
+    },
+    {
+        "id": 30, // Bone Coil
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 39 ]
+    },
+    {
+        "id": 31, // Bone Greaves
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 40 ]
+    },
+    {
+        "id": 32, // Kulu Headpiece
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 5 ]
+    },
+    {
+        "id": 33, // Kulu Mail
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 5 ]
+    },
+    {
+        "id": 34, // Kulu Vambraces
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 61 ]
+    },
+    {
+        "id": 35, // Kulu Coil
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 27 ]
+    },
+    {
+        "id": 36, // Kulu Greaves
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 61 ]
+    },
+    {
+        "id": 37, // Hunter's Headgear
+        "rarity": 1,
+        "type": 4,
+        "skills": [ 23 ]
+    },
+    {
+        "id": 38, // Hunter's Armor
+        "rarity": 1,
+        "type": 5,
+        "skills": [ 1 ]
+    },
+    {
+        "id": 39, // Hunter's Gloves
+        "rarity": 1,
+        "type": 6,
+        "skills": [ 23 ]
+    },
+    {
+        "id": 40, // Hunter's Faulds
+        "rarity": 1,
+        "type": 7,
+        "skills": [ 58 ]
+    },
+    {
+        "id": 41, // Hunter's Leggings
+        "rarity": 1,
+        "type": 8,
+        "skills": [ 59 ]
     }
 ]

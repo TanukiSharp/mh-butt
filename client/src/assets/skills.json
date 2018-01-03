@@ -1,6 +1,6 @@
 [
     {
-        "id": 1, // machine de guerre
+        "id": 1, // attack boost
         "levels": [
             { "level": 1, "abilityIds": [ 1 ] },
             { "level": 2, "abilityIds": [ 2 ] },
@@ -12,7 +12,7 @@
         ]
     },
     {
-        "id": 2, // bastion
+        "id": 2, // defense boost
         "abilities": [
             { "level": 1, "abilityIds": [ 9 ] },
             { "level": 2, "abilityIds": [ 10 ] },
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "id": 3, // invulnerabilite
+        "id": 3, // evade window
         "abilities": [
             { "level": 1, "abilityIds": [ 17 ] },
             { "level": 2, "abilityIds": [ 18 ] },
@@ -34,7 +34,7 @@
         ]
     },
     {
-        "id": 4, // fronde+
+        "id": 4, // slinger capacity
         "abilities": [
             { "level": 1, "abilityIds": [ 22 ] },
             { "level": 2, "abilityIds": [ 23 ] },
@@ -42,7 +42,77 @@
         ]
     },
     {
-        "id": 5, // etancheite
+        "id": 5, // critical eye
+        "abilities": [
+            { "level": 1, "abilityIds": [ 60 ] },
+            { "level": 2, "abilityIds": [ 61 ] },
+            { "level": 3, "abilityIds": [ 62 ] },
+            { "level": 4, "abilityIds": [ 63 ] },
+            { "level": 5, "abilityIds": [ 64 ] },
+            { "level": 6, "abilityIds": [ 65 ] },
+            { "level": 7, "abilityIds": [ 66 ] }
+        ]
+    },
+    {
+        "id": 7, // fire attack
+        "abilities": [
+            { "level": 1, "abilityIds": [ 49 ] },
+            { "level": 2, "abilityIds": [ 50 ] },
+            { "level": 3, "abilityIds": [ 51 ] },
+            { "level": 4, "abilityIds": [ 52, 54 ] },
+            { "level": 5, "abilityIds": [ 53, 54 ] }
+        ]
+    },
+    {
+        "id": 8, // water attack
+        "abilities": [
+            { "level": 1, "abilityIds": [ 76 ] },
+            { "level": 2, "abilityIds": [ 77 ] },
+            { "level": 3, "abilityIds": [ 78 ] },
+            { "level": 4, "abilityIds": [ 79, 54 ] },
+            { "level": 5, "abilityIds": [ 80, 54 ] }
+        ]
+    },
+    {
+        "id": 9, // thunder attack
+        "abilities": [
+            { "level": 1, "abilityIds": [ 81 ] },
+            { "level": 2, "abilityIds": [ 82 ] },
+            { "level": 3, "abilityIds": [ 83 ] },
+            { "level": 4, "abilityIds": [ 84, 54 ] },
+            { "level": 5, "abilityIds": [ 85, 54 ] }
+        ]
+    },
+    {
+        "id": 10, // ice attack
+        "abilities": [
+            { "level": 1, "abilityIds": [ 55 ] },
+            { "level": 2, "abilityIds": [ 56 ] },
+            { "level": 3, "abilityIds": [ 57 ] },
+            { "level": 4, "abilityIds": [ 58, 54 ] },
+            { "level": 5, "abilityIds": [ 59, 54 ] }
+        ]
+    },
+    {
+        "id": 11, // dragon attack
+        "abilities": [
+            { "level": 1, "abilityIds": [ 86 ] },
+            { "level": 2, "abilityIds": [ 87 ] },
+            { "level": 3, "abilityIds": [ 88 ] },
+            { "level": 4, "abilityIds": [ 89, 54 ] },
+            { "level": 5, "abilityIds": [ 90, 54 ] }
+        ]
+    },
+    {
+        "id": 16, // fire resistance
+        "abilities": [
+            { "level": 1, "abilityIds": [ 29 ] },
+            { "level": 2, "abilityIds": [ 30 ] },
+            { "level": 3, "abilityIds": [ 31, 28 ] }
+        ]
+    },
+    {
+        "id": 17, // water resistance
         "abilities": [
             { "level": 1, "abilityIds": [ 25 ] },
             { "level": 2, "abilityIds": [ 26 ] },
@@ -50,11 +120,87 @@
         ]
     },
     {
-        "id": 6, // ignifuge
+        "id": 18, // thunder resistance
         "abilities": [
-            { "level": 1, "abilityIds": [ 29 ] },
-            { "level": 2, "abilityIds": [ 30 ] },
-            { "level": 3, "abilityIds": [ 31, 28 ] }
+            { "level": 1, "abilityIds": [ 67 ] },
+            { "level": 2, "abilityIds": [ 68 ] },
+            { "level": 3, "abilityIds": [ 69, 28 ] }
         ]
-    }
+    },
+    {
+        "id": 19, // ice resistance
+        "abilities": [
+            { "level": 1, "abilityIds": [ 70 ] },
+            { "level": 2, "abilityIds": [ 71 ] },
+            { "level": 3, "abilityIds": [ 72, 28 ] }
+        ]
+    },
+    {
+        "id": 20, // dragon resistance
+        "abilities": [
+            { "level": 1, "abilityIds": [ 73 ] },
+            { "level": 2, "abilityIds": [ 74 ] },
+            { "level": 3, "abilityIds": [ 75, 28 ] }
+        ]
+    },
+    {
+        "id": 23, // stun resistance
+        "abilities": [
+            { "level": 1, "abilityIds": [ 32 ] },
+            { "level": 2, "abilityIds": [ 33 ] },
+            { "level": 3, "abilityIds": [ 34 ] }
+        ]
+    },
+    {
+        "id": 27, // stealth
+        "abilities": [
+            { "level": 1, "abilityIds": [ 40 ] },
+            { "level": 2, "abilityIds": [ 41 ] },
+            { "level": 3, "abilityIds": [ 42 ] }
+        ]
+    },
+    {
+        "id": 44, // speed eating
+        "abilities": [
+            { "level": 1, "abilityIds": [ 43 ] },
+            { "level": 2, "abilityIds": [ 44 ] },
+            { "level": 3, "abilityIds": [ 45 ] }
+        ]
+    },
+    {
+        "id": 58, // master mounter
+        "abilities": [
+            { "level": 1, "abilityIds": [ 35 ] }
+        ]
+    },
+    {
+        "id": 59, // cliffhanger
+        "abilities": [
+            { "level": 1, "abilityIds": [ 36 ] }
+        ]
+    },
+    {
+        "id": 60, // recovery up
+        "abilities": [
+            { "level": 1, "abilityIds": [ 37 ] },
+            { "level": 2, "abilityIds": [ 38 ] },
+            { "level": 3, "abilityIds": [ 39 ] }
+        ]
+    },
+    {
+        "id": 61, // recovery speed
+        "abilities": [
+            { "level": 1, "abilityIds": [ 46 ] },
+            { "level": 2, "abilityIds": [ 47 ] },
+            { "level": 3, "abilityIds": [ 48 ] }
+        ]
+    }/*,
+    {
+        "id": xxxxxxxxxxx,
+        "abilities": [
+            { "level": 1, "abilityIds": [  ] },
+            { "level": 2, "abilityIds": [  ] },
+            { "level": 3, "abilityIds": [  ] }
+        ]
+    }*/
 ]

@@ -1,27 +1,27 @@
 {
     "1": {
-        "name": "Collier de guerre",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Attack Charm I",
+        "description": ""
     },
     "2": {
-        "name": "Collier de défense",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Defense Charm I",
+        "description": ""
     },
     "3": {
-        "name": "Collier angléique",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Evasion Charm I",
+        "description": ""
     },
     "4": {
-        "name": "Collier de Lugus",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Slinger Charm I",
+        "description": ""
     },
     "5": {
-        "name": "Collier d'opale",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Water Charm I",
+        "description": ""
     },
     "6": {
-        "name": "Collier de rubis",
-        "description": "Un accessoire magique qui augmente les talents"
+        "name": "Fire Charm I",
+        "description": ""
     },
     "7": {
         "name": "Anja Headgear",
