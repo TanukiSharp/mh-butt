@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { IEquipmentLocale } from '../../models/equipment';
-import { ISkillLocale } from '../../models/skill';
+import { IEquipmentLocale } from '../models/equipment';
+import { ISkillLocale } from '../models/skill';
 
 export interface ILocalizationMap<T> { [key: number]: T; }
 

@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { ISkillData } from '../../models/skill';
+import { ISkillData } from '../models/skill';
 
 @Injectable()
 export class DataService implements OnInit {
