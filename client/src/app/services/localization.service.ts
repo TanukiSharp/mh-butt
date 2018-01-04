@@ -4,7 +4,7 @@ import { Http, Response } from '@angular/http';
 import { IEquipmentLocale } from '../models/equipment';
 import { ISkillLocale } from '../models/skill';
 
-export interface ILocalizationMap<T> { [key: number]: T; }
+export interface ILocalizationMap<T> { [key: number]: T }
 
 @Injectable()
 export class LocalizationService {
@@ -106,33 +106,43 @@ export class LocalizationService {
         return equipmentLocale.description;
     }
 
-    private async loadLocalization(language: string) {
+    public async loadLocalization(language: string): Promise<boolean> {
 
         if (language === this.loadedLanguage) {
-            return;
+            return true;
         }
 
-        this.equipments = await this.loadLocalizationFile<IEquipmentLocale>('equipments', language);
-        this.skills = await this.loadLocalizationFile<ISkillLocale>('skills', language);
-        this.abilities = await this.loadLocalizationFile<string>('abilities', language);
+        let equipments = await this.loadLocalizationFile<IEquipmentLocale>('equipments', language);
+        let skills = await this.loadLocalizationFile<ISkillLocale>('skills', language);
+        let abilities = await this.loadLocalizationFile<string>('abilities', language);
+
+        if (equipments === null || skills === null || abilities === null) {
+            return false;
+        }
+
+        this.equipments = equipments;
+        this.skills = skills;
+        this.abilities = abilities;
 
         console.log('this.equipments', this.equipments);
         console.log('this.skills', this.skills);
         console.log('this.abilities', this.abilities);
 
         this.loadedLanguage = language;
+
+        return true;
     }
 
-    private async loadLocalizationFile<T>(what: string, language: string): Promise<ILocalizationMap<T>> {
-        let jsonRoot: Object;
-        let filename = `assets/localization/${what}.${language}.json`;
+    private async loadLocalizationFile<T>(what: string, language: string): Promise<ILocalizationMap<T>|null> {
+        let jsonRoot: ILocalizationMap<T>;
+        let filename = `../assets/localization/${what}.${language}.json`;
         let response: Response = await this.http.get('../' + filename).toPromise();
 
         try {
             jsonRoot = response.json();
         } catch (err) {
-            console.error(err);
-            return;
+            console.error(`Failed to parse file '${filename}': error: ${err}`);
+            return null;
         }
 
         let result: ILocalizationMap<T> = {};
@@ -140,12 +150,12 @@ export class LocalizationService {
         for (let key in jsonRoot) {
             let num = parseInt(key, 10);
             if (Number.isSafeInteger(num) === false || num.toString() !== key) {
-                console.error(`Invalid key '${key} in file '${filename}'`);
+                console.error(`Invalid key '${key}' in file '${filename}'`);
                 // TODO properly report errors
-                continue;
+                return null;
             }
 
-            result[num] = jsonRoot[key];
+            result[num] = jsonRoot[key] as T;
         }
 
         return result;
