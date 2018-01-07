@@ -3,6 +3,7 @@ import { DataService } from './services/data.service';
 import { LocalizationService } from './services/localization.service';
 import { BuilderService } from './services/builder.service';
 import { ArmorSet } from './models/armorSet';
+import { ScoredSkill } from './models/skill';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +13,9 @@ import { ArmorSet } from './models/armorSet';
 })
 export class AppComponent implements OnInit {
 
-    title = 'app';
+    public title: string = 'app';
+
+    public scoredSkill: ScoredSkill;
 
     public constructor(
         private dataService: DataService,
@@ -34,6 +37,8 @@ export class AppComponent implements OnInit {
             console.error('builderService.constructArmorSet(...) failed');
             return;
         }
+
+        this.scoredSkill = armorSet.equippedSkills[0];
 
         console.log('armorSet: ', armorSet);
     }
