@@ -154,7 +154,7 @@ export class BuilderService {
             let skillHighestLevel: number = skill.findHighestLevel();
             let isOverSkilled: boolean = false;
 
-            if (container.totalScore > skillHighestLevel) {
+            if (skillHighestLevel > -1 && container.totalScore > skillHighestLevel) {
                 isOverSkilled = true;
             }
 

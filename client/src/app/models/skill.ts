@@ -30,6 +30,10 @@ export class ScoredSkill {
     public get skill(): Skill {
         return this._skill;
     }
+
+    public toString(): string {
+        return `score: ${this.score}, skill: [${this.skill.toString()}]`;
+    }
 }
 
 export class SkillLevel {
@@ -73,9 +77,41 @@ export class Skill {
         return this._levels;
     }
 
+    public findAbilitiesByLevel(level: number): Ability[]|null {
+
+        for (let i: number = 0; i < this._levels.length; i += 1) {
+            if (this._levels[i].level === level) {
+                return this._levels[i].abilities;
+            }
+        }
+
+        return null;
+    }
+
+    public findLowestLevel(): number {
+
+        let lowestLevel: number = Number.MAX_SAFE_INTEGER;
+
+        if (this._levels.length === 0) {
+            return -1;
+        }
+
+        for (let i: number = 0; i < this._levels.length; i += 1) {
+            if (this._levels[i].level < lowestLevel) {
+                lowestLevel = this._levels[i].level;
+            }
+        }
+
+        return lowestLevel;
+    }
+
     public findHighestLevel(): number {
 
         let highestLevel: number = 0;
+
+        if (this._levels.length === 0) {
+            return -1;
+        }
 
         for (let i: number = 0; i < this._levels.length; i += 1) {
             if (this._levels[i].level > highestLevel) {
@@ -84,5 +120,9 @@ export class Skill {
         }
 
         return highestLevel;
+    }
+
+    public toString(): string {
+        return `name: ${this.name}, levels: ${this.levels.length}`;
     }
 }
