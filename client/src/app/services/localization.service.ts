@@ -124,10 +124,6 @@ export class LocalizationService {
         this.skills = skills;
         this.abilities = abilities;
 
-        console.log('this.equipments', this.equipments);
-        console.log('this.skills', this.skills);
-        console.log('this.abilities', this.abilities);
-
         this.loadedLanguage = language;
 
         return true;

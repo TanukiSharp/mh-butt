@@ -19,21 +19,19 @@ export class AppComponent implements OnInit {
         private localizationService: LocalizationService,
         private builderService: BuilderService
     ) {
-        console.log(dataService);
-        console.log(localizationService);
     }
 
     async ngOnInit() {
 
         if (await this.localizationService.loadLocalization('en') === false) {
-            console.log('localizationService.loadLocalization(\'en\'): FUUU');
+            console.error('localizationService.loadLocalization(\'en\') failed');
             return;
         }
 
         let armorSet: ArmorSet|null = await this.builderService.constructArmorSet(7, 38, 19, 10, 16, 1);
 
         if (armorSet === null) {
-            console.log('armorSet: FUUU');
+            console.error('builderService.constructArmorSet(...) failed');
             return;
         }
 
