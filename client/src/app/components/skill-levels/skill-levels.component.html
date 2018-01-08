@@ -1,17 +1,60 @@
-<span>{{scoredSkill}}</span>
+<div style="background-color: #1e1e1e;">
+    <span>{{scoredSkill}}</span>
 
-<br/>
-<hr/>
-<br/>
+    <br/>
+    <hr/>
+    <br/>
 
-<div class="skillLevelsGrid">
-    <ng-template ngFor let-skillLevel [ngForOf]="detailedScoredSkill.skill.levels">
-        <span class="left">Level {{skillLevel.level}}</span>
-        <div class="right" [ngClass]="{'isActive': detailedScoredSkill.scores.total === skillLevel.level}">
-            <div *ngFor="let ability of skillLevel.abilities">
-                {{ability.title}}
-            </div>
+    <div class="skillLevelsGrid">
+
+        <span class="left">Points</span>
+
+        <div class="right skillPointsDispatchGrid">
+
+            <div class="top weapon top-bg"></div>
+            <div class="top helm top-bg"></div>
+            <div class="top armor top-bg"></div>
+            <div class="top gloves top-bg"></div>
+            <div class="top tassets top-bg"></div>
+            <div class="top leggings top-bg"></div>
+            <div class="top talisman top-bg"></div>
+
+            <img class="top weapon" src="../../../assets/images/gs_gray.png"/>
+            <img class="top helm" src="../../../assets/images/helm_yellow.png"/>
+            <img class="top armor" src="../../../assets/images/armor_yellow.png"/>
+            <img class="top gloves" src="../../../assets/images/gloves_gray.png"/>
+            <img class="top tassets" src="../../../assets/images/tassets_yellow.png"/>
+            <img class="top leggings" src="../../../assets/images/leggings_gray.png"/>
+            <img class="top talisman" src="../../../assets/images/talisman_yellow.png"/>
+
+            <div class="bottom weapon bottom-bg"></div>
+            <div class="bottom helm bottom-bg-highlight"></div>
+            <div class="bottom armor bottom-bg-highlight"></div>
+            <div class="bottom gloves bottom-bg"></div>
+            <div class="bottom tassets bottom-bg-highlight"></div>
+            <div class="bottom leggings bottom-bg"></div>
+            <div class="bottom talisman bottom-bg-highlight"></div>
+
+            <span class="bottom weapon"></span>
+            <span class="bottom helm">1</span>
+            <span class="bottom armor">1</span>
+            <span class="bottom gloves"></span>
+            <span class="bottom tassets">1</span>
+            <span class="bottom leggings"></span>
+            <span class="bottom talisman">1</span>
+
         </div>
+
         <div class="sep"></div>
-    </ng-template>
+
+        <ng-template ngFor let-skillLevel [ngForOf]="detailedScoredSkill.skill.levels">
+            <span class="left">Level {{skillLevel.level}}</span>
+            <div class="right" [ngClass]="{'isActive': detailedScoredSkill.scores.total === skillLevel.level}">
+                <div *ngFor="let ability of skillLevel.abilities">
+                    {{ability.title}}
+                </div>
+            </div>
+            <div class="sep"></div>
+        </ng-template>
+    </div>
 </div>

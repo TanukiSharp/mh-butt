@@ -3,7 +3,6 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     grid-column-gap: 24px;
-    background-color: #1e1e1e;
 }
 
 .left {
@@ -25,4 +24,81 @@
 .isActive {
     color: rgb(114, 196, 81);
     /* color: rgb(66, 194, 72); */
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+.skillPointsDispatchGrid {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(7, 26px);
+    grid-template-rows: repeat(2, 26px);
+    grid-column-gap: 16px;
+}
+
+.top-bg {
+    width: 26px;
+    height: 26px;
+    border-color: #a0a0a0;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    background-color: #141414;
+}
+.bottom-bg {
+    margin-top: 1px;
+    width: 24px;
+    height: 24px;
+    border-color: #323232;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    background-color: #282828;
+}
+
+.bottom-bg-highlight {
+    margin-top: 1px;
+    width: 24px;
+    height: 24px;
+    border-color: #414037;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    background-color: #4b481d;
+}
+
+.top {
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+.bottom {
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.weapon {
+    grid-column: 1;
+}
+.helm {
+    grid-column: 2;
+}
+.armor {
+    grid-column: 3;
+}
+.gloves {
+    grid-column: 4;
+}
+.tassets {
+    grid-column: 5;
+}
+.leggings {
+    grid-column: 6;
+}
+.talisman {
+    grid-column: 7;
 }
