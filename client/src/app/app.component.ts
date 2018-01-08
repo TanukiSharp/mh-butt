@@ -3,7 +3,7 @@ import { DataService } from './services/data.service';
 import { LocalizationService } from './services/localization.service';
 import { BuilderService } from './services/builder.service';
 import { ArmorSet } from './models/armorSet';
-import { ScoredSkill } from './models/skill';
+import { DetailedScoredSkill } from './models/skill';
 
 @Component({
     selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
     public title: string = 'app';
 
-    public scoredSkill: ScoredSkill;
+    public detailedScoredSkill: DetailedScoredSkill;
 
     public constructor(
         private dataService: DataService,
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
             return;
         }
 
-        this.scoredSkill = armorSet.equippedSkills[0];
+        this.detailedScoredSkill = armorSet.equippedSkills[0];
 
         console.log('armorSet: ', armorSet);
     }

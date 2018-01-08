@@ -1,11 +1,11 @@
 import { Equipment } from './equipment';
-import { ScoredSkill } from './skill';
+import { DetailedScoredSkill } from './skill';
 
 export class ArmorSet {
 
     public constructor(
         private _equipments: Equipment[],
-        private _equippedSkills: ScoredSkill[]
+        private _equippedSkills: DetailedScoredSkill[]
     ) {
     }
 
@@ -13,7 +13,7 @@ export class ArmorSet {
         return this._equipments;
     }
 
-    public get equippedSkills(): ScoredSkill[] {
+    public get equippedSkills(): DetailedScoredSkill[] {
         return this._equippedSkills;
     }
 }

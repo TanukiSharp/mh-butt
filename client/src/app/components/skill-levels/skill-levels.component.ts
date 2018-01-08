@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Skill, ScoredSkill } from '../../models/skill';
+import { DetailedScoredSkill } from '../../models/skill';
 
 @Component({
     selector: 'app-skill-levels',
@@ -9,7 +9,7 @@ import { Skill, ScoredSkill } from '../../models/skill';
 export class SkillLevelsComponent implements OnInit {
 
     @Input()
-    public scoredSkill: ScoredSkill;
+    public detailedScoredSkill: DetailedScoredSkill;
 
     constructor() {
     }

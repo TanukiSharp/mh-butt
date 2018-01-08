@@ -15,6 +15,17 @@ export interface ISkillData {
     levels: ISkillLevelData[];
 }
 
+export interface IScores {
+    weapon: number;
+    helm: number;
+    armor: number;
+    gloves: number;
+    tassets: number;
+    leggings: number;
+    talisman: number;
+    total: number;
+}
+
 export class ScoredSkill {
 
     public constructor(
@@ -33,6 +44,27 @@ export class ScoredSkill {
 
     public toString(): string {
         return `score: ${this.score}, skill: [${this.skill.toString()}]`;
+    }
+}
+
+export class DetailedScoredSkill {
+
+    public constructor(
+        private _scores: IScores,
+        private _skill: Skill
+    ) {
+    }
+
+    public get scores(): IScores {
+        return this._scores;
+    }
+
+    public get skill(): Skill {
+        return this._skill;
+    }
+
+    public toString(): string {
+        return `total score: ${this.scores.total}, skill: [${this.skill.toString()}]`;
     }
 }
 

@@ -5,9 +5,9 @@
 <br/>
 
 <div class="skillLevelsGrid">
-    <ng-template ngFor let-skillLevel [ngForOf]="scoredSkill.skill.levels">
+    <ng-template ngFor let-skillLevel [ngForOf]="detailedScoredSkill.skill.levels">
         <span class="left">Level {{skillLevel.level}}</span>
-        <div class="right" [ngClass]="{'isActive': scoredSkill.score === skillLevel.level}">
+        <div class="right" [ngClass]="{'isActive': detailedScoredSkill.scores.total === skillLevel.level}">
             <div *ngFor="let ability of skillLevel.abilities">
                 {{ability.title}}
             </div>

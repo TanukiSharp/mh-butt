@@ -1,15 +1,14 @@
 import { Skill, ScoredSkill } from './skill';
 
 export enum EquipmentType {
-    None = 0,
-    Weapon = 1,
-    Neckless = 2,
-    Survival = 3,
-    Helm = 4,
-    Armor = 5,
-    Gloves = 6,
-    Tassets = 7,
-    Leggings = 8
+    None,
+    Weapon,
+    Helm,
+    Armor,
+    Gloves,
+    Tassets,
+    Leggings,
+    Talisman
 }
 
 export interface IEquipmentLocale {

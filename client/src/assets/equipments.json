@@ -2,247 +2,247 @@
     {
         "id": 1,
         "rarity": 3,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 1, "score": 1 } ]
     },
     {
         "id": 2,
         "rarity": 3,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 2, "score": 1 } ]
     },
     {
         "id": 3,
         "rarity": 4,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 3, "score": 1 } ]
     },
     {
         "id": 4,
         "rarity": 3,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 4, "score": 1 } ]
     },
     {
         "id": 5,
         "rarity": 3,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 5, "score": 1 } ]
     },
     {
         "id": 6,
         "rarity": 3,
-        "type": 2,
+        "type": 7,
         "skills": [ { "id": 6, "score": 1 } ]
     },
     {
         "id": 7,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 1, "score": 1 } ]
     },
     {
         "id": 8,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 16, "score": 1 } ]
     },
     {
         "id": 9,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 7, "score": 1 } ]
     },
     {
         "id": 10,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 1, "score": 1 } ]
     },
     {
         "id": 11,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 16, "score": 1 } ]
     },
     {
         "id": 12,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 2, "score": 1 } ]
     },
     {
         "id": 13,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 10, "score": 1 } ]
     },
     {
         "id": 14,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 2, "score": 1 } ]
     },
     {
         "id": 15,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 23, "score": 1 } ]
     },
     {
         "id": 16,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 5, "score": 1 } ]
     },
     {
         "id": 17,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 60, "score": 1 } ]
     },
     {
         "id": 18,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 2, "score": 1 } ]
     },
     {
         "id": 19,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 44, "score": 1 } ]
     },
     {
         "id": 20,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 61, "score": 1 } ]
     },
     {
         "id": 21,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 44, "score": 1 } ]
     },
     {
         "id":22,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 44, "score": 1 } ]
     },
     {
         "id": 23,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 60, "score": 1 } ]
     },
     {
         "id": 24,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 27, "score": 1 } ]
     },
     {
         "id": 25,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 60, "score": 1 } ]
     },
     {
         "id": 26,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 27, "score": 1 } ]
     },
     {
         "id": 27,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 37, "score": 1 } ]
     },
     {
         "id": 28,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 1, "score": 1 } ]
     },
     {
         "id": 29,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 38, "score": 1 } ]
     },
     {
         "id": 30,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 39, "score": 1 } ]
     },
     {
         "id": 31,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 40, "score": 1 } ]
     },
     {
         "id": 32,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 5, "score": 1 } ]
     },
     {
         "id": 33,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 5, "score": 1 } ]
     },
     {
         "id": 34,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 61, "score": 1 } ]
     },
     {
         "id": 35,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 27, "score": 1 } ]
     },
     {
         "id": 36,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 61, "score": 1 } ]
     },
     {
         "id": 37,
         "rarity": 1,
-        "type": 4,
+        "type": 2,
         "skills": [ { "id": 23, "score": 1 } ]
     },
     {
         "id": 38,
         "rarity": 1,
-        "type": 5,
+        "type": 3,
         "skills": [ { "id": 1, "score": 1 } ]
     },
     {
         "id": 39,
         "rarity": 1,
-        "type": 6,
+        "type": 4,
         "skills": [ { "id": 23, "score": 1 } ]
     },
     {
         "id": 40,
         "rarity": 1,
-        "type": 7,
+        "type": 5,
         "skills": [ { "id": 58, "score": 1 } ]
     },
     {
         "id": 41,
         "rarity": 1,
-        "type": 8,
+        "type": 6,
         "skills": [ { "id": 59, "score": 1 } ]
     }
 ]

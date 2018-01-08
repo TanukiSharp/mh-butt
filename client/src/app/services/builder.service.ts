@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DataService } from './data.service';
 import { LocalizationService } from './localization.service';
 import { Equipment, IEquipmentData, IEquipmentSkillData, EquipmentType, IEquipmentLocale } from '../models/equipment';
-import { ISkillData, Skill, ISkillLevelData, SkillLevel, ISkillLocale, ScoredSkill } from '../models/skill';
+import { ISkillData, Skill, ISkillLevelData, SkillLevel, ISkillLocale, ScoredSkill, DetailedScoredSkill, IScores } from '../models/skill';
 import { Ability } from '../models/ability';
 import { ArmorSet } from '../models/armorSet';
 
@@ -136,31 +136,52 @@ export class BuilderService {
                 let skillIdStr: string = skills[j].skill.id.toString();
                 let score: number = skills[j].score;
 
-                if (skillPoints[skillIdStr] === undefined) {
-                    skillPoints[skillIdStr] = { totalScore: score, scoredSkill: skills[j] };
-                } else {
-                    skillPoints[skillIdStr].totalScore += score;
+                let skillPointContainer: ISkillPointContainer = skillPoints[skillIdStr];
+
+                if (skillPointContainer === undefined) {
+                    let scores = { weapon: 0, helm: 0, armor: 0, gloves: 0, tassets: 0, leggings: 0, talisman: 0, total: 0 };
+                    skillPointContainer = { scores: scores, scoredSkill: skills[j] };
+                    skillPoints[skillIdStr] = skillPointContainer;
                 }
+
+                switch (equipement.type) {
+                    case EquipmentType.Weapon:
+                        skillPointContainer.scores.weapon += 1;
+                        break;
+                    case EquipmentType.Helm:
+                        skillPointContainer.scores.helm += 1;
+                        break;
+                    case EquipmentType.Armor:
+                        skillPointContainer.scores.armor += 1;
+                        break;
+                    case EquipmentType.Gloves:
+                        skillPointContainer.scores.gloves += 1;
+                        break;
+                    case EquipmentType.Tassets:
+                        skillPointContainer.scores.tassets += 1;
+                        break;
+                    case EquipmentType.Leggings:
+                        skillPointContainer.scores.leggings += 1;
+                        break;
+                    case EquipmentType.Talisman:
+                        skillPointContainer.scores.talisman += 1;
+                        break;
+                }
+
+                skillPointContainer.scores.total += 1;
             }
         }
 
-        let equippedSkills: ScoredSkill[] = [];
+        let equippedSkills: DetailedScoredSkill[] = [];
 
         let key: string;
         for (key in skillPoints) {
 
             let container: ISkillPointContainer = skillPoints[key];
-            let skill: Skill = container.scoredSkill.skill;
-            let skillHighestLevel: number = skill.findHighestLevel();
-            let isOverSkilled: boolean = false;
-
-            if (skillHighestLevel > -1 && container.totalScore > skillHighestLevel) {
-                isOverSkilled = true;
-            }
 
             equippedSkills.push(
-                new ScoredSkill(
-                    container.totalScore,
+                new DetailedScoredSkill(
+                    container.scores,
                     container.scoredSkill.skill
                 )
             );
@@ -248,6 +269,6 @@ export class BuilderService {
 }
 
 interface ISkillPointContainer {
-    totalScore: number;
+    scores: IScores;
     scoredSkill: ScoredSkill;
 }
