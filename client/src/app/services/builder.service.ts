@@ -171,16 +171,19 @@ export class BuilderService {
 
     private validateEquipments(equipments: Equipment[]): boolean {
 
+        let weaponCount: number = 0;
         let helmCount: number = 0;
         let armorCount: number = 0;
         let glovesCount: number = 0;
         let tassetsCount: number = 0;
         let leggingsCount: number = 0;
         let necklessCount: number = 0;
-        let survivalCount: number = 0;
 
         for (let i: number = 0; i < equipments.length; i += 1) {
             switch (equipments[i].type) {
+                case EquipmentType.Weapon:
+                    weaponCount += 1;
+                    break;
                 case EquipmentType.Helm:
                     helmCount += 1;
                     break;
@@ -196,47 +199,47 @@ export class BuilderService {
                 case EquipmentType.Leggings:
                     leggingsCount += 1;
                     break;
-                case EquipmentType.Neckless:
+                case EquipmentType.Talisman:
                     necklessCount += 1;
-                    break;
-                case EquipmentType.Survival:
-                    survivalCount += 1;
                     break;
             }
         }
 
+        // if (weaponCount < 1) {
+        //     console.error('A weapon is mandatory');
+        //     return false;
+        // } else if (weaponCount > 1) {
+        //     console.error(`Only one weapon is allowed (got ${weaponCount})`);
+        //     return false;
+        // }
+
         if (helmCount > 1) {
-            console.error('At most one helm is allowed');
+            console.error(`At most one helm is allowed (got ${helmCount})`);
             return false;
         }
 
         if (armorCount > 1) {
-            console.error('At most one armor is allowed');
+            console.error(`At most one armor is allowed (got ${armorCount})`);
             return false;
         }
 
         if (glovesCount > 1) {
-            console.error('At most one gloves pair is allowed');
+            console.error(`At most one gloves pair is allowed (got ${glovesCount})`);
             return false;
         }
 
         if (tassetsCount > 1) {
-            console.error('At most one tassets pair is allowed');
+            console.error(`At most one tassets pair is allowed (got ${tassetsCount})`);
             return false;
         }
 
         if (leggingsCount > 1) {
-            console.error('At most one leggings pair is allowed');
+            console.error(`At most one leggings pair is allowed (got ${leggingsCount})`);
             return false;
         }
 
         if (necklessCount > 1) {
-            console.error('At most one neckless is allowed');
-            return false;
-        }
-
-        if (survivalCount > 2) {
-            console.error('At most two survival tools are allowed');
+            console.error(`At most one neckless is allowed (got ${necklessCount})`);
             return false;
         }
 
