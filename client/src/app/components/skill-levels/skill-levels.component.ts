@@ -14,6 +14,24 @@ export class SkillLevelsComponent implements OnInit {
     constructor() {
     }
 
+    public pointsToText(points: number): string {
+        if (points <= 0) {
+            return '';
+        }
+        return points.toString();
+    }
+
+    public pointsToEquipmentIcon(what: string, points: number): string {
+        return '../../../assets/images/' + what + '_' + (points <= 0 ? 'gray' : 'yellow') + '.png';
+    }
+
+    public pointsToBottomHighlight(points: number) {
+        if (points <= 0) {
+            return 'bottom-bg';
+        }
+        return 'bottom-bg-highlight';
+    }
+
     ngOnInit() {
     }
 }

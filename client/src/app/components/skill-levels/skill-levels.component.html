@@ -19,29 +19,29 @@
             <div class="top leggings top-bg"></div>
             <div class="top talisman top-bg"></div>
 
-            <img class="top weapon" src="../../../assets/images/gs_gray.png"/>
-            <img class="top helm" src="../../../assets/images/helm_yellow.png"/>
-            <img class="top armor" src="../../../assets/images/armor_yellow.png"/>
-            <img class="top gloves" src="../../../assets/images/gloves_gray.png"/>
-            <img class="top tassets" src="../../../assets/images/tassets_yellow.png"/>
-            <img class="top leggings" src="../../../assets/images/leggings_gray.png"/>
-            <img class="top talisman" src="../../../assets/images/talisman_yellow.png"/>
+            <img class="top weapon" src="{{pointsToEquipmentIcon('weapon', detailedScoredSkill.scores.weapon)}}"/>
+            <img class="top helm" src="{{pointsToEquipmentIcon('helm', detailedScoredSkill.scores.helm)}}"/>
+            <img class="top armor" src="{{pointsToEquipmentIcon('armor', detailedScoredSkill.scores.armor)}}"/>
+            <img class="top gloves" src="{{pointsToEquipmentIcon('gloves', detailedScoredSkill.scores.gloves)}}"/>
+            <img class="top tassets" src="{{pointsToEquipmentIcon('tassets', detailedScoredSkill.scores.tassets)}}"/>
+            <img class="top leggings" src="{{pointsToEquipmentIcon('leggings', detailedScoredSkill.scores.leggings)}}"/>
+            <img class="top talisman" src="{{pointsToEquipmentIcon('talisman', detailedScoredSkill.scores.talisman)}}"/>
 
-            <div class="bottom weapon bottom-bg"></div>
-            <div class="bottom helm bottom-bg-highlight"></div>
-            <div class="bottom armor bottom-bg-highlight"></div>
-            <div class="bottom gloves bottom-bg"></div>
-            <div class="bottom tassets bottom-bg-highlight"></div>
-            <div class="bottom leggings bottom-bg"></div>
-            <div class="bottom talisman bottom-bg-highlight"></div>
+            <div class="bottom weapon" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.weapon)"></div>
+            <div class="bottom helm" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.helm)"></div>
+            <div class="bottom armor" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.armor)"></div>
+            <div class="bottom gloves" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.gloves)"></div>
+            <div class="bottom tassets" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.tassets)"></div>
+            <div class="bottom leggings" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.leggings)"></div>
+            <div class="bottom talisman" [ngClass]="pointsToBottomHighlight(detailedScoredSkill.scores.talisman)"></div>
 
-            <span class="bottom weapon"></span>
-            <span class="bottom helm">1</span>
-            <span class="bottom armor">1</span>
-            <span class="bottom gloves"></span>
-            <span class="bottom tassets">1</span>
-            <span class="bottom leggings"></span>
-            <span class="bottom talisman">1</span>
+            <span class="bottom weapon">{{pointsToText(detailedScoredSkill.scores.weapon)}}</span>
+            <span class="bottom helm">{{pointsToText(detailedScoredSkill.scores.helm)}}</span>
+            <span class="bottom armor">{{pointsToText(detailedScoredSkill.scores.armor)}}</span>
+            <span class="bottom gloves">{{pointsToText(detailedScoredSkill.scores.gloves)}}</span>
+            <span class="bottom tassets">{{pointsToText(detailedScoredSkill.scores.tassets)}}</span>
+            <span class="bottom leggings">{{pointsToText(detailedScoredSkill.scores.leggings)}}</span>
+            <span class="bottom talisman">{{pointsToText(detailedScoredSkill.scores.talisman)}}</span>
 
         </div>
 
