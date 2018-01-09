@@ -3,7 +3,8 @@ import { DataService } from './services/data.service';
 import { LocalizationService } from './services/localization.service';
 import { BuilderService } from './services/builder.service';
 import { ArmorSet } from './models/armorSet';
-import { DetailedScoredSkill } from './models/skill';
+import { DetailedScoredSkill, ScoreUtils, IScores } from './models/skill';
+import { Equipment, EquipmentType } from './models/equipment';
 
 @Component({
     selector: 'app-root',
@@ -31,15 +32,20 @@ export class AppComponent implements OnInit {
             return;
         }
 
-        let armorSet: ArmorSet|null = await this.builderService.constructArmorSet(7, 38, 19, 10, 16, 1);
+        // let armorSet: ArmorSet|null = await this.builderService.constructArmorSet(7, 38, 19, 10, 16, 1);
 
-        if (armorSet === null) {
-            console.error('builderService.constructArmorSet(...) failed');
-            return;
+        // if (armorSet === null) {
+        //     console.error('builderService.constructArmorSet(...) failed');
+        //     return;
+        // }
+
+        // this.detailedScoredSkill = armorSet.equippedSkills[0];
+
+        // console.log('armorSet: ', armorSet);
+
+        let equipment: Equipment|null = await this.builderService.constructEquipement(1);
+        if (equipment !== null) {
+            this.detailedScoredSkill = DetailedScoredSkill.constructFromSkill(equipment.type, equipment.skills[0]);
         }
-
-        this.detailedScoredSkill = armorSet.equippedSkills[0];
-
-        console.log('armorSet: ', armorSet);
     }
 }

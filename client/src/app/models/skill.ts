@@ -1,4 +1,5 @@
 import { Ability } from './ability';
+import { Equipment, EquipmentType } from './equipment';
 
 export interface ISkillLocale {
     name: string;
@@ -53,6 +54,17 @@ export class DetailedScoredSkill {
         private _scores: IScores,
         private _skill: Skill
     ) {
+    }
+
+    public static constructFromSkill(equipmentType: EquipmentType, skill: ScoredSkill): DetailedScoredSkill {
+
+        let scores = ScoreUtils.createIScores();
+
+        for (let i: number = 0; i < skill.score; i += 1) {
+            ScoreUtils.incrementScore(scores, equipmentType);
+        }
+
+        return new DetailedScoredSkill(scores, skill.skill);
     }
 
     public get scores(): IScores {
