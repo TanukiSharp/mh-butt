@@ -158,3 +158,47 @@ export class Skill {
         return `name: ${this.name}, levels: ${this.levels.length}`;
     }
 }
+
+export class ScoreUtils {
+    public static createIScores(): IScores {
+        let scores: IScores = {
+            weapon: 0,
+            helm: 0,
+            armor: 0,
+            gloves: 0,
+            tassets: 0,
+            leggings: 0,
+            talisman: 0,
+            total: 0
+        };
+        return scores;
+    }
+
+    public static incrementScore(scores: IScores, equipmentType: EquipmentType) {
+        switch (equipmentType) {
+            case EquipmentType.Weapon:
+                scores.weapon += 1;
+                break;
+            case EquipmentType.Helm:
+                scores.helm += 1;
+                break;
+            case EquipmentType.Armor:
+                scores.armor += 1;
+                break;
+            case EquipmentType.Gloves:
+                scores.gloves += 1;
+                break;
+            case EquipmentType.Tassets:
+                scores.tassets += 1;
+                break;
+            case EquipmentType.Leggings:
+                scores.leggings += 1;
+                break;
+            case EquipmentType.Talisman:
+                scores.talisman += 1;
+                break;
+        }
+
+        scores.total += 1;
+    }
+}

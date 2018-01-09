@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DataService } from './data.service';
 import { LocalizationService } from './localization.service';
 import { Equipment, IEquipmentData, IEquipmentSkillData, EquipmentType, IEquipmentLocale } from '../models/equipment';
-import { ISkillData, Skill, ISkillLevelData, SkillLevel, ISkillLocale, ScoredSkill, DetailedScoredSkill, IScores } from '../models/skill';
+import { ISkillData, Skill, ISkillLevelData, SkillLevel, ISkillLocale, ScoredSkill, DetailedScoredSkill, IScores, ScoreUtils } from '../models/skill';
 import { Ability } from '../models/ability';
 import { ArmorSet } from '../models/armorSet';
 
@@ -139,36 +139,12 @@ export class BuilderService {
                 let skillPointContainer: ISkillPointContainer = skillPoints[skillIdStr];
 
                 if (skillPointContainer === undefined) {
-                    let scores = { weapon: 0, helm: 0, armor: 0, gloves: 0, tassets: 0, leggings: 0, talisman: 0, total: 0 };
+                    let scores: IScores = ScoreUtils.createIScores();
                     skillPointContainer = { scores: scores, scoredSkill: skills[j] };
                     skillPoints[skillIdStr] = skillPointContainer;
                 }
 
-                switch (equipement.type) {
-                    case EquipmentType.Weapon:
-                        skillPointContainer.scores.weapon += 1;
-                        break;
-                    case EquipmentType.Helm:
-                        skillPointContainer.scores.helm += 1;
-                        break;
-                    case EquipmentType.Armor:
-                        skillPointContainer.scores.armor += 1;
-                        break;
-                    case EquipmentType.Gloves:
-                        skillPointContainer.scores.gloves += 1;
-                        break;
-                    case EquipmentType.Tassets:
-                        skillPointContainer.scores.tassets += 1;
-                        break;
-                    case EquipmentType.Leggings:
-                        skillPointContainer.scores.leggings += 1;
-                        break;
-                    case EquipmentType.Talisman:
-                        skillPointContainer.scores.talisman += 1;
-                        break;
-                }
-
-                skillPointContainer.scores.total += 1;
+                ScoreUtils.incrementScore(skillPointContainer.scores, equipement.type);
             }
         }
 
@@ -192,75 +168,47 @@ export class BuilderService {
 
     private validateEquipments(equipments: Equipment[]): boolean {
 
-        let weaponCount: number = 0;
-        let helmCount: number = 0;
-        let armorCount: number = 0;
-        let glovesCount: number = 0;
-        let tassetsCount: number = 0;
-        let leggingsCount: number = 0;
-        let necklessCount: number = 0;
+        let scores: IScores = ScoreUtils.createIScores();
 
         for (let i: number = 0; i < equipments.length; i += 1) {
-            switch (equipments[i].type) {
-                case EquipmentType.Weapon:
-                    weaponCount += 1;
-                    break;
-                case EquipmentType.Helm:
-                    helmCount += 1;
-                    break;
-                case EquipmentType.Armor:
-                    armorCount += 1;
-                    break;
-                case EquipmentType.Gloves:
-                    glovesCount += 1;
-                    break;
-                case EquipmentType.Tassets:
-                    tassetsCount += 1;
-                    break;
-                case EquipmentType.Leggings:
-                    leggingsCount += 1;
-                    break;
-                case EquipmentType.Talisman:
-                    necklessCount += 1;
-                    break;
-            }
+            ScoreUtils.incrementScore(scores, equipments[i].type);
         }
 
-        // if (weaponCount < 1) {
+        // if (scores.weapon < 1) {
         //     console.error('A weapon is mandatory');
         //     return false;
-        // } else if (weaponCount > 1) {
-        //     console.error(`Only one weapon is allowed (got ${weaponCount})`);
+        // } else if (scores.weapon > 1) {
+        //     console.error(`Only one weapon is allowed (got ${scores.weapon})`);
         //     return false;
         // }
 
-        if (helmCount > 1) {
-            console.error(`At most one helm is allowed (got ${helmCount})`);
+        if (scores.helm > 1) {
+            console.error(`At most one helm is allowed (got ${scores.helm})`);
             return false;
         }
 
-        if (armorCount > 1) {
-            console.error(`At most one armor is allowed (got ${armorCount})`);
+        if (scores.armor > 1) {
+            console.error(`At most one armor is allowed (got ${scores.armor})`);
             return false;
         }
 
-        if (glovesCount > 1) {
-            console.error(`At most one gloves pair is allowed (got ${glovesCount})`);
+        if (scores.gloves > 1) {
+            console.error(`At most one gloves pair is allowed (got ${scores.gloves})`);
             return false;
         }
 
-        if (tassetsCount > 1) {
-            console.error(`At most one tassets pair is allowed (got ${tassetsCount})`);
+        if (scores.tassets > 1) {
+            console.error(`At most one tassets pair is allowed (got ${scores.tassets})`);
             return false;
         }
 
-        if (leggingsCount > 1) {
-            console.error(`At most one leggings pair is allowed (got ${leggingsCount})`);
+        if (scores.leggings > 1) {
+            console.error(`At most one leggings pair is allowed (got ${scores.leggings})`);
             return false;
         }
 
-        if (necklessCount > 1) {
-            console.error(`At most one neckless is allowed (got ${necklessCount})`);
+        if (scores.talisman > 1) {
+            console.error(`At most one talisman is allowed (got ${scores.talisman})`);
             return false;
         }
 
