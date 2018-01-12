@@ -11,16 +11,6 @@
 .right {
     grid-column: 2;
 }
-.sep {
-    /* grid-column-start: 1;
-    grid-column-end: 2; */
-    grid-column: span 2;
-    border-style: dashed;
-    border-width: 1px;
-    border-color: rgb(122, 122, 122);
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
 .isActive {
     color: rgb(114, 196, 81);
     /* color: rgb(66, 194, 72); */
@@ -37,6 +27,7 @@ img {
     grid-template-columns: repeat(7, 26px);
     grid-template-rows: repeat(2, 26px);
     grid-column-gap: 16px;
+    margin-bottom: 8px;
 }
 
 .top-bg {

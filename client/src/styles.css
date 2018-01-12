@@ -12,3 +12,12 @@ body {
         -1px 1px 0 #000,
         1px 1px 0 #000;
 }
+
+.ui-horizontal-sep {
+    grid-column: span 2;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: rgb(122, 122, 122);
+    /*margin-top: 6px;
+    margin-bottom: 6px;*/
+}

@@ -1,3 +1,23 @@
-<p>
-    info-skill works!
-</p>
+<div style="display: grid; grid-template-columns: 1fr 20px 1fr; grid-template-rows: auto">
+
+    <div style="grid-column: 1; background-color: black">
+
+        <ng-template ngFor let-skill [ngForOf]="armorSet.equippedSkills">
+            <div style="display: grid; grid-template-columns: auto; grid-template-rows: auto;">
+
+                <div [hidden]="selectedSkill != skill" style="grid-column: 1; grid-row: 1; background: linear-gradient(rgb(61, 192, 0), black, rgb(61, 192, 0));"></div>
+
+                <div style="grid-column: 1; grid-row: 1; padding-top: 6px; padding-bottom: 6px;" (click)="selectedSkill = skill">
+                    <div>{{skill.skill.name}}</div>
+                    <div>Niv. {{skill.scores.total}}</div>
+                </div>
+            </div>
+            <div class="ui-horizontal-sep"></div>
+        </ng-template>
+
+    </div>
+
+    <div style="grid-column: 2; background: linear-gradient(to right, black , #1e1e1e);"></div>
+
+    <app-skill-levels style="grid-column: 3;" [detailedScoredSkill]="selectedSkill"></app-skill-levels>
+</div>
