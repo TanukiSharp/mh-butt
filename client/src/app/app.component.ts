@@ -32,7 +32,19 @@ export class AppComponent implements OnInit {
             return;
         }
 
-        let armorSet: ArmorSet|null = await this.builderService.constructArmorSet(7, 38, 19, 10, 16, 1);
+        let armorSet: ArmorSet|null = null;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        armorSet = await this.builderService.constructArmorSet(7, 38, 19, 10, 16, 1);
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        // let equipment: Equipment|null = await this.builderService.constructEquipement(1);
+        // if (equipment !== null) {
+        //     armorSet = new ArmorSet(
+        //         [],
+        //         [ DetailedScoredSkill.constructFromSkill(EquipmentType.Talisman, equipment.skills[0]) ]
+        //     );
+        // }
+        ////////////////////////////////////////////////////////////////////////////////////////////
 
         if (armorSet === null) {
             console.error('builderService.constructArmorSet(...) failed');
@@ -40,12 +52,6 @@ export class AppComponent implements OnInit {
         }
 
         this.armorSet = armorSet;
-
         console.log('armorSet: ', armorSet);
-
-        // let equipment: Equipment|null = await this.builderService.constructEquipement(1);
-        // if (equipment !== null) {
-        //     this.detailedScoredSkill = DetailedScoredSkill.constructFromSkill(EquipmentType.Talisman, equipment.skills[0]);
-        // }
     }
 }
