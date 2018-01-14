@@ -17,7 +17,9 @@ export interface IEquipmentLocale {
 }
 
 export interface IEquipmentSkillData {
+    /** skill id */
     id: number;
+    /** skill points conferred by the given equipment */
     score: number;
 }
 
