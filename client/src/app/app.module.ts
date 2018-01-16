@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { InfoSkillComponent } from './components/info-skill/info-skill.component';
 import { SkillLevelsComponent } from './components/skill-levels/skill-levels.component';
 import { DetailedScoredSkillComponent } from './components/detailed-scored-skill/detailed-scored-skill.component';
+import { EquipmentPickerComponent } from './components/equipment-picker/equipment-picker.component';
 import { AbilitySelectorComponent } from './components/ability-selector/ability-selector.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AbilitySelectorComponent } from './components/ability-selector/ability-
         InfoSkillComponent,
         SkillLevelsComponent,
         DetailedScoredSkillComponent,
+        EquipmentPickerComponent,
         AbilitySelectorComponent,
     ],
     imports: [
