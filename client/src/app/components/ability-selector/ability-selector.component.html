@@ -1,0 +1,24 @@
+<div class="grid">
+
+    <div class="leftPane">
+        <span>Filter: </span><input type="text" [(ngModel)]="abilityFilter"/>
+        <div class="ui-horizontal-sep"></div>
+        <div class="scroller">
+            <div *ngFor="let vm of abilities" [hidden]="!isAbilityVisible(vm.ability)">
+                <div style="display: grid; grid-template-columns: auto; grid-template-rows: auto;" (click)="selectAbility(vm)">
+                    <div [hidden]="!vm.isSelected" style="grid-column: 1; grid-row: 1; background: linear-gradient(rgb(61, 192, 0), rgb(77, 131, 52), rgb(61, 192, 0));"></div>
+                    <div style="grid-column: 1; grid-row: 1; padding-top: 6px; padding-bottom: 6px;">{{localizationService.getAbilityText(vm.ability.id)}}</div>
+                    <div class="ui-horizontal-sep" style="grid-column: 1; grid-row: 1; "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middlePane">
+    </div>
+
+    <div class="rightPane">
+
+    </div>
+
+</div>

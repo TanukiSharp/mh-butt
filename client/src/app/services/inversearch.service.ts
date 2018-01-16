@@ -11,6 +11,8 @@ export interface IInverseSkillLevel {
 }
 
 export interface IInverseAbility {
+    /** ability id */
+    id: number;
     conferredBySkills: IInverseSkillLevelMap;
 }
 
@@ -19,18 +21,17 @@ interface ISkillDataMap { [skillId: number]: ISkillData }
 
 interface IInverseSkillLevelMap { [skillIdLevelPair: string]: IInverseSkillLevel }
 interface IInverseSkillMap { [skillId: number]: IInverseAbility }
-
-export interface IInverseAbilityMap { [abilityId: number]: IInverseAbility }
+interface IInverseAbilityMap { [abilityId: number]: IInverseAbility }
 
 @Injectable()
 export class InversearchService {
 
-    private inverseMap: IInverseAbilityMap;
+    private inverseMap: IInverseAbility[];
 
     constructor(private dataService: DataService) {
     }
 
-    public async getAbilities(): Promise<IInverseAbilityMap|null> {
+    public async getAbilities(): Promise<IInverseAbility[]|null> {
 
         if (this.inverseMap) {
             return this.inverseMap;
@@ -56,7 +57,7 @@ export class InversearchService {
         console.log(`constructing inverse search map took ${duration} ${unit}`);
     }
 
-    private printInverseSearchMapJsonSize(inverseAbilityMap: IInverseAbilityMap) {
+    private printInverseSearchMapJsonSize(inverseAbilityMap: IInverseAbility[]) {
 
         let size: number = JSON.stringify(inverseAbilityMap).length;
         let originalSize: number = size;
@@ -109,7 +110,7 @@ export class InversearchService {
             startTime = Date.now();
         //}
 
-        let localInverseMap: IInverseAbilityMap|null = this.constructInverseSearchMapInternal(equipments, skills);
+        let localInverseMap: IInverseAbility[]|null = this.constructInverseSearchMapInternal(equipments, skills);
 
         if (!localInverseMap) {
             return false;
@@ -135,7 +136,7 @@ export class InversearchService {
         return resultMap;
     }
 
-    private constructInverseSearchMapInternal(equipments: IEquipmentData[], skills: ISkillData[]): IInverseAbilityMap|null {
+    private constructInverseSearchMapInternal(equipments: IEquipmentData[], skills: ISkillData[]): IInverseAbility[]|null {
 
         let inverseAbilityMap: IInverseAbilityMap = {};
 
@@ -178,6 +179,7 @@ export class InversearchService {
 
                         if (!inverseAbility) {
                             inverseAbility = {
+                                id: abilityId,
                                 conferredBySkills: {}
                             };
                             inverseAbilityMap[abilityId] = inverseAbility;
@@ -204,6 +206,13 @@ export class InversearchService {
             console.log('test.length: ' + test.length);
         }
 
-        return inverseAbilityMap;
+        let result: IInverseAbility[] = [];
+
+        let key: string;
+        for (key in inverseAbilityMap) {
+            result.push(inverseAbilityMap[key]);
+        }
+
+        return result;
     }
 }

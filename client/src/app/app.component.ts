@@ -5,7 +5,7 @@ import { BuilderService } from './services/builder.service';
 import { ArmorSet } from './models/armorSet';
 import { DetailedScoredSkill, ScoreUtils, IScores } from './models/skill';
 import { Equipment, EquipmentType } from './models/equipment';
-import { InversearchService, IInverseAbilityMap } from './services/inversearch.service';
+import { InversearchService, IInverseAbility } from './services/inversearch.service';
 
 @Component({
     selector: 'app-root',
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
 
     private async testInserseSearchMapCreation() {
 
-        let inverseAbilityMap: IInverseAbilityMap|null = await this.inversearchService.getAbilities();
+        let inverseAbilityMap: IInverseAbility[]|null = await this.inversearchService.getAbilities();
 
         if (!inverseAbilityMap) {
             console.error('Failed to create inverse search map');
